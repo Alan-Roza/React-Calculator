@@ -1,0 +1,175 @@
+$primary-color: #8402E8;
+$secondary-color: #2c3347;
+$white: white;
+
+.background-calculator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calculator {
+  width: 22rem;
+  border-radius: 2rem;
+  // border: 1px solid rgba(0,0,0,0.5);
+  box-shadow: 0px 5px 15px rgba($primary-color, 1);
+
+  &__display {
+    height: 15rem;
+    border-radius: 2rem 2rem 0 0;
+    background: linear-gradient(150deg,#9000ff, #500e83);
+  }
+
+  &__keyboard {
+    display: grid;
+    background: white;
+    padding: 5px;
+    gap: 5px;
+    grid-template-areas: 
+      'history history history backspace'
+      'C       openP   closeP  percentage'
+      'seven   eight   nine    division'
+      'four    five    six     multiplier'
+      'one     two     three   less'
+      'dote    o       equal   plus'
+    ;
+  }
+
+  &__key {
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    min-width: 2rem;
+    border-radius: 0.5rem;
+
+    transition: background-color 200ms ease;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $white;
+      cursor: pointer;
+    }
+  }
+  
+  &__history {
+    border-bottom: 1px solid black;
+    grid-area: history;
+    display: flex;
+    align-items: center;
+    border-radius: 0;
+    
+    transition: color 200ms ease;
+    
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  &__backspace {
+    border-bottom: 1px solid black;
+    border-radius: 0;
+    grid-area: backspace;
+  }
+
+  &__history-icon {
+    padding-left: 1rem;
+  }
+
+  &__clear {
+    grid-area: C;
+  }
+
+  &__open-parentheses {
+    grid-area: openP;
+  }
+
+  &__close-parentheses {
+    grid-area: closeP;
+  }
+
+  &__percentage {
+    grid-area: percentage;
+  }
+
+  &__division {
+    grid-area: division;
+    font-weight: bold;
+    background-color: $secondary-color;
+    color: $white;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+
+  &__multiplier {
+    grid-area: multiplier;
+  }
+
+  &__less {
+    grid-area: less;
+  }
+
+  &__plus {
+    grid-area: plus;
+  }
+
+  &__equal {
+    grid-area: equal;
+    padding: 0.5rem 0;
+    font-size: 30px;
+    border-radius: 0.5rem;
+    background: $primary-color;
+  }
+
+  &__dot {
+    grid-area: dote;
+    padding: 0.5rem 0;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  &__zero {
+    grid-area: o;
+  }
+
+  &__one {
+    grid-area: one;
+  }
+
+  &__two {
+    grid-area: two;
+  }
+
+  &__three {
+    grid-area: three;
+  }
+
+  &__four {
+    grid-area: four;
+  }
+
+  &__five {
+    grid-area: five;
+  }
+
+  &__six {
+    grid-area: six;
+  }
+
+  &__seven {
+    grid-area: seven;
+  }
+
+  &__eight {
+    grid-area: eight;
+  }
+
+  &__nine {
+    grid-area: nine;
+  }
+
+}
