@@ -1,0 +1,25 @@
+@import '../App.scss';
+
+.keyboard-key {
+  padding: 1rem 0;
+  width: 100%;
+  text-align: center;
+  display: block;
+  font-size: 20px;
+  border-radius: 0.5rem;
+  color: $white;
+  user-select: none;
+
+  transition: 200ms ease;
+
+  &:hover {
+    background-color: $primary-color;
+    color: $special-button;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  &__colored-button {
+    background: $primary-color;
+  }
+}
